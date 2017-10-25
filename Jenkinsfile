@@ -4,7 +4,6 @@ pipeline {
         stage('Build Container') {
             steps {
                 echo 'step build'
-                checkout scm
                 bat 'each hello'
             }
         }
