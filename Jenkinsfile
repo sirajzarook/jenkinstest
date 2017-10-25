@@ -3,40 +3,26 @@ pipeline {
     stages {
         stage('Build Container') {
             steps {
-                echo 'Building $BRANCH_NAME'
-                echo 'Current directory ${params:currentPath}'
-                sh build-unittest.sh
+                echo 'step build'
             }
-
-
         }
         stage('Run Tests') {
             steps {
-                echo 'Running Tests $BRANCH_NAME'
+                echo 'step test'
+
             }
         }
         stage('Results') {
             steps {
-                step([
-                  
-                ])
+                echo 'step result'
             }
         }
         stage('Remove Test Containers') {
             steps {
-                echo 'Current directory ${params:currentPath}'
+                echo 'remove container'
 
             }
         }
-        stage('Deploy DB To Support') {
-            steps {
-                echo 'Current directory ${params:currentPath}'
-            }
-        }
-        stage('Deploy To Support') {
-             steps {       
-                echo 'Current directory ${params:currentPath}'
-            }
-        }
+
     }
 }
