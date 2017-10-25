@@ -32,12 +32,7 @@ pipeline {
                 echo 'Current directory ${params:currentPath}'
         }
         stage('Deploy To Support') {
-            when {
-                branch "feature/*"
-            }
-            steps {
-                echo 'Deploying Code to support....'
-            }
+                echo 'Current directory ${params:currentPath}'
         }
     }
 }
