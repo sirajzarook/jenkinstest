@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Build Container') {
             steps {
-
+                sh build-unittest.sh
             }
         }
         stage('Run Tests') {
