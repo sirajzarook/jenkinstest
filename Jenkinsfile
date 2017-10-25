@@ -29,10 +29,14 @@ pipeline {
             }
         }
         stage('Deploy DB To Support') {
+            steps {
                 echo 'Current directory ${params:currentPath}'
+            }
         }
         stage('Deploy To Support') {
+             steps {       
                 echo 'Current directory ${params:currentPath}'
+            }
         }
     }
 }
