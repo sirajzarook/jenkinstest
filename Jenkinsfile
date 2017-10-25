@@ -4,7 +4,8 @@ pipeline {
         stage('Build Container') {
             steps {
                 echo 'step build'
-                sh src/build-unittest.sh
+                checkout scm
+                bat 'each hello'
             }
         }
         stage('Run Tests') {
