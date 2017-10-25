@@ -8,7 +8,7 @@ pipeline {
                 sh build-unittest.sh
             }
 
-            
+
         }
         stage('Run Tests') {
             steps {
@@ -29,7 +29,7 @@ pipeline {
             }
         }
         stage('Deploy DB To Support') {
-           
+                echo 'Current directory ${params:currentPath}'
         }
         stage('Deploy To Support') {
             when {
