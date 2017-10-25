@@ -7,6 +7,8 @@ pipeline {
                 echo 'Current directory ${params:currentPath}'
                 sh build-unittest.sh
             }
+
+            
         }
         stage('Run Tests') {
             steps {
