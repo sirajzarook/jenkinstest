@@ -4,7 +4,7 @@ pipeline {
         stage('Build Container') {
             steps {
                 echo 'step build'
-                bat 'each hello'
+                bat 'echo hello'
             }
         }
         stage('Run Tests') {
