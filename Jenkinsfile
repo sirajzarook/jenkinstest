@@ -3,12 +3,14 @@ pipeline {
     stages {
         stage('Build Container') {
             steps {
+                echo 'Building $BRANCH_NAME'
+                echo 'Current directory ${params:currentPath}'
                 sh build-unittest.sh
             }
         }
         stage('Run Tests') {
             steps {
-
+                echo 'Running Tests $BRANCH_NAME'
             }
         }
         stage('Results') {
