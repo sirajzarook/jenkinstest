@@ -4,7 +4,7 @@ pipeline {
         stage('Build Container') {
             steps {
                 echo 'step build'
-                sh build-unittest.sh
+                sh src/build-unittest.sh
             }
         }
         stage('Run Tests') {
